@@ -3,11 +3,12 @@ import Coins from "./routes/Coins"
 import Coin from "./routes/Coin"
 
 function Router() {
-    return (
+    return ( 
     <BrowserRouter>
         <Routes>
             <Route path="/" element={<Coins />} />
-            <Route path="/:coinId" element={<Coin />} />
+            <Route path="/:coinId/*" element={<Coin />} />
+            {/* '/*'는 v6에서 nested routes를 구현하는 방법*/}
         </Routes>
     </BrowserRouter>
     )
