@@ -6,7 +6,7 @@ function Router() {
     return ( 
     <BrowserRouter>
         <Routes>
-            <Route path="/" element={<Coins />} />
+            <Route path={`${process.env.PUBLIC_URL}/`} element={<Coins />} />
             <Route path="/:coinId/*" element={<Coin />} />
             {/* '/*'는 v6에서 nested routes를 구현하는 방법*/}
         </Routes>
